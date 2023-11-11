@@ -1,4 +1,6 @@
 # GPD: GitHub Package Downloader
+![Python Version](https://img.shields.io/badge/python-3.x-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 ## Overview
 GPD (GitHub Package Downloader) is a Python script that streamlines the process of downloading and installing packages directly from GitHub repositories. It leverages the GitHub API to search for repositories based on the specified package name, identifies the repository with the highest number of stars, and clones it to a local directory. GPD also checks if the package has already been downloaded, ensuring efficient use of resources.
