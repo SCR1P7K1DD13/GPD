@@ -17,8 +17,8 @@ GPD (GitHub Package Downloader) is a Python script that streamlines the process 
 
 ## Getting Started
 ```bash
-git clone https://github.com/SCR1P7K1DD13/GPD.git
-cd GPD
+git clone https://github.com/SCR1P7K1DD13/GitHub-Package-Downloader.git
+cd GitHub-Package-Downloader
 pip install -r requirements.txt
 python gpd.py
 ```
