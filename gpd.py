@@ -11,8 +11,7 @@ init(autoreset=True)
 
 def display_program_name():
     res = pyg.figlet_format("GPD", font="lean")
-    print()
-    print(f" \t{Fore.CYAN}{res}")
+    print(f"\n{Fore.CYAN}{res}")
 
 def search_github_repo(package_name):
     search_url = f'https://api.github.com/search/repositories?q={package_name}&sort=stars&order=desc'
@@ -74,8 +73,17 @@ if __name__ == "__main__":
     repositories = search_github_repo(package_name)
 
     if repositories:
-        selected_repo = repositories[0]
-        repo_url = selected_repo['clone_url']
+        print(f"{Fore.CYAN}Choose download option:")
+        print(f"1. Auto-download based on stars (default)")
+        print(f"2. Provide custom repository URL")
+
+        user_choice = input("Enter your choice (1 or 2): ").strip()
+
+        if user_choice == "2":
+            repo_url = input(f"{Fore.WHITE}Enter the custom repository URL: ")
+        else:
+            selected_repo = repositories[0]
+            repo_url = selected_repo['clone_url']
 
         download_folder = os.path.join(os.getcwd(), 'GPD')
         if not os.path.exists(download_folder):
